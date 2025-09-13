@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasos de Creación de la Máquina Virtual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pasos de Creación y Configuración de la Máquina Virtual</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Paso</th>
+        <th>Acción realizada</th>
+        <th>Detalles / Comandos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Crear máquina virtual</td>
+        <td>Hora: 9:14. Grupo: <b>NicoCami</b>. Nombre: <b>evaluacion1</b>. Región: South America, zona 1. Clave: <b>evaluacion1_key</b>. Usuario: <b>fcazure</b>. Permitir HTTP. Validación superada.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Descargar clave privada</td>
+        <td>Guardada en carpeta <b>usuarios</b> para acceso a la VM.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Conexión a la VM</td>
+        <td>Editar configuración, agregar ruta de clave privada. Probar acceso SSH desde <b>cmd</b> como administrador.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Primer intento fallido de conexión</td>
+        <td>SSH falló 3 veces, se cambió de red y funcionó, pero no descargaba.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Reiniciar proceso</td>
+        <td>Se eliminó la máquina anterior. Nuevo grupo: <b>camilaFrancisco</b>. Nombre: <b>evaluacion2</b>. Serie: <b>bv2</b>. Usuario: <b>fcuser</b>. Validación superada.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Crear y conectar nueva VM</td>
+        <td>Repetición de pasos previos. Acceso por SSH con mejor conexión.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Actualizar sistema</td>
+        <td><code>sudo apt update</code></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Instalar Apache2</td>
+        <td><code>sudo apt install apache2 -y</code></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Reiniciar y comprobar Apache</td>
+        <td>Reiniciar: <code>sudo systemctl restart apache2</code>.<br>Ver estado: <code>sudo systemctl status apache2</code>.</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Navegar al directorio web</td>
+        <td>
+          <code>cd ..</code>, <code>cd ..</code>, <code>ls</code>, 
+          <code>cd var</code>, <code>ls</code>, <code>cd www</code>, 
+          <code>cd html</code>, <code>ls</code>.
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Configurar red</td>
+        <td>Agregar regla de puerto <b>80 TCP</b>. Nombre de regla: <b>camilo</b>. Reiniciar para aplicar cambios.</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Clonar repositorio Git</td>
+        <td><code>sudo git clone &lt;https&gt;</code>. Verificar con <code>ls</code>.</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Manejo de archivos duplicados</td>
+        <td>
+          <code>cd 13744</code>, <code>cd log</code>, <code>ls</code>, 
+          <code>cd ..</code>, <code>cd ..</code>, <code>ls</code>, 
+          <code>sudo rm index.html</code>, <code>sudo rm -r 13744</code>. 
+          Volver a copiar.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
